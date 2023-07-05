@@ -1,4 +1,6 @@
-# Smart Contract Project
+#Functions and Errors
+Project
+
 
 This project contains a smart contract written in Solidity that demonstrates the usage of `require()`, `assert()`, and `revert()` statements.
 
