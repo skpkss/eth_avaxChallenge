@@ -1,0 +1,33 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SmartContract {
+    function requireExample(int num) external pure returns (int) {
+        // Use require to validate a condition
+        require(num > 0, "Number must be greater than zero");
+        
+        // Perform some computation
+        int result = num * 2;
+        
+        return result;
+    }
+    
+    function assertExample(uint num) external pure returns (uint) {
+        uint result;
+        
+        // Use assert to ensure a condition that must always hold
+        assert(num != 0);
+        
+        // Perform some computation
+        result = 10 / num;
+        
+        return result;
+    }
+    
+    function revertExample(bool condition) external pure {
+        // Use revert to revert the transaction and provide an error message
+        if (condition) {
+            revert("Condition is true");
+        }
+    }
+}
